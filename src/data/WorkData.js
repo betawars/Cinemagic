@@ -33,61 +33,54 @@ export const cards = [
 export const Work = [
     {
         id:1,
-        name:"Agency Landing Page",
-        description:"It is build on top of the React JS, with styledComponents and GSAP for smooth scrolling animations.",
-        tags:["react","gsap","styledComponents"],
-        
-        demo:"https://agency-website-eta.vercel.app/",
-        github:"https://github.com/codebucks27/Agency-website"
+        name:"Infosys",
+        description:"At Infosys, I developed software solutions for the HCSC account using React, enhancing user engagement and accessibility. I optimized SQL queries, achieving an 80% reduction in response time, and gained experience with Angular 5 and JSP for the Markets account. Additionally, I reverse-engineered Java code for the Atradius account, improving efficiency by 30% with a complete front-end overhaul using React.",
+        tags:["ReactJs","AngularJS","Javascript","SQL","Spring boot"],
+        knowMore:"https://www.infosys.com/about.html"
     },
     {
         id:2,
-        name:"Job listing website",
-        description:"A Job listing website build in ReactJS. With searching and filtering functionalities.",
-        tags:["react","sass"],
-        
-        demo:"http://react-job-listing-website.codebucks27.vercel.app/",
-        github:"https://github.com/codebucks27/react-job-listing-website"
+        name:"Cosmo Films",
+        description:"At Cosmo Films, I provided network support and troubleshooting for WAN/LAN connectivity issues, ensuring reliable communication across the organization. I installed and maintained data and voice circuits using routers, switches, and WAN devices. My efforts in configuring and troubleshooting network infrastructure contributed to a 15% improvement in system uptime.",
+        tags:["Network troubleshoot","Windows"],
+        knowMore:"https://www.cosmofilms.com/company-overview"
         
     },
     {
         id:3,
-        name:"Dev.to Clone",
-        description:"A clone of Dev.to build using ReactJS. With realtime fetching of articles from dev.to using API.",
-        tags:["react","api","sass"],
+        name:"Employee-Portal",
+        description:"WIP!! An extenstion to the existing, EMPCenter for the student worker.",
+        tags:["Kotlin", "Android Studio", "Android"],
         
-        demo:"http://devto-clone-codebucks27.vercel.app/",
-        github:"https://github.com/codebucks27/devto-clone"
+        demo:"",
+        github:"https://github.com/betawars/Employee-Portal"
     },
     {
         id:4,
-        name:"Sidebar Menu",
-        description:"A cool looking sidebar menu build using ReactJS and styledComponents.It has really smooth animations.",
-        tags:["react","styledComponents","react-router"],
+        name:"Cinemagic",
+        description:"Cinemagic is a movie planner app which uses TMDB database as backend and kotlin as frontend",
+        tags:["Kotlin", "Android Studio", "Android"],
         
-        demo:"https://react-sidebar.vercel.app/",
-        github:"https://github.com/codebucks27/react-sidebar"
-       
-    },{
+        demo:"",
+        github:"https://github.com/betawars/Cinemagic"
+    },
+    {
         id:5,
-        name:"Todo App(React + Redux)",
-        description:"A todo app build using Redux-toolkit and framer-motion for smooth animations.",
-        tags:["react","redux","framer-motion"],
+        name:"Offline Smartphone Assistant",
+        description:"Offine Smartphone Assistant is an app developed on Android Studio using Java with the aim of giving basic functionalities like popular smartphone assistants like Siri and Google Assistant but without the need for the internet. It allows users to make a call, send a message, play music and so on, internally processing the words and not needing the use of the internet.",
+        tags:["Kotlin", "Android Studio", "Android"],
         
-        demo:"http://react-redux-todo-app-git-main-codebucks27.vercel.app/",
-        github:"https://github.com/codebucks27/React-Redux-Todo-App"
-        
+        demo:"",
+        github:""
     },
     {
         id:6,
-        name:"Responsive Navigation Menu",
-        description:"A reponsive navbar menu component in ReactJS with react-router functionalities. Built from scratch.",
-        tags:["react","react-router","css"],
+        name:"Series Manager",
+        description:"Series manager is completely developed on core java. It takes the user inpur for movies and the watch time details and store the date in MySQL table locally. ",
+        tags:["Core Java, MySQL"],
         
-        demo:"http://react-responsive-navbar-codebucks27.vercel.app/",
-        github:"https://github.com/codebucks27/React-responsive-navbar"
-        
+        demo:"",
+        github:""
     },
-    
   
 ] 

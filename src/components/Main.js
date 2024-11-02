@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled, { keyframes } from 'styled-components'
 import LogoComponent from '../subComponents/LogoComponent'
@@ -27,7 +27,7 @@ const Container = styled.div`
 padding: 2rem;
 `
 
-const Contact = styled.p`
+const Contact = styled.a`
 color: ${props => props.theme.text};
 position: absolute;
 top: 2rem;
@@ -130,24 +130,29 @@ const Main = () => {
     const [click, setClick] = useState(false);
     const [formClick, setFormClick] = useState(false);
 
-    const handleClick = () => setClick(!click);
+    useEffect(() => {
+        setTimeout(()=>{
+            setClick(true);
+           }, 1)
+        
+      }, []);
     const handleFormClick = () => setFormClick(!formClick)
 
     return (
         <MainContainer>
             
             
-         <DarkDiv   click={props => props.click}/>
+         <DarkDiv   click={click}/>
             
             <Container>
             {
                 formClick ?
                     <ContactForm /> : ""
             }
-            <LogoComponent theme={!click ? 'dark' :'light'}/>
-            <SocialIcons theme={!click ? 'dark' :'light'} />
+            <LogoComponent theme={click ? 'dark' :'light'}/>
+            <SocialIcons theme={click ? 'dark' :'light'} />
             {/* target="_blank" href="mailto:betawars@oregonstate.edu" */}
-            <Contact onClick={handleFormClick}>
+            <Contact target="_blank" href="mailto:betawars@oregonstate.edu">
                 <motion.h2
                 initial={{
                     y:-200,
@@ -180,7 +185,7 @@ const Main = () => {
                     Blog
                 </motion.h2>
             </BLOG> */}
-            {/* <WORK to="/work" click={+!click}>
+            <WORK to="/work" click={+click}>
                 <motion.h2
                 initial={{
                     y:-200,
@@ -195,9 +200,9 @@ const Main = () => {
                 >
                     Work
                 </motion.h2>
-            </WORK> */}
+            </WORK>
             <BottomBar>
-            <ABOUT to="/about" click={+!click}>
+            <ABOUT to="/about" click={+click}>
                 <motion.h2
                 initial={{
                     y:200,
@@ -234,8 +239,6 @@ const Main = () => {
 
             </Container>
             <Intro/>
-            
-            {/* {click ? <Intro click={click} /> : null } */}
         </MainContainer>
     )
 }

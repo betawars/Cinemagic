@@ -50,7 +50,8 @@ display: flex;
 `
 
 const Text = styled.div`
-font-size: calc(1em + 1.5vw);
+// font-size: calc(1em + 1.5vw);
+font-size: 3.5vh;
 color: ${props => props.theme.body};
 padding: 2rem;
 cursor: pointer;
@@ -61,7 +62,8 @@ justify-content: space-evenly;
 
 &>*:last-child{
     color: ${props => `rgba(${props.theme.bodyRgba},0.6)` };
-    font-size: calc(0.5rem + 1.5vw);
+    // font-size: calc(0.5rem + 1.5vw);
+    font-size:3.5vh;
     font-weight:300;
 
 }
@@ -78,13 +80,13 @@ const float = keyframes`
 const Floating = styled.div`
 position: absolute;
 top: 100%;
-right: 0%;
-width: 100%;
+right: 10%;
+width: 80%;
 cursor:pointer;
 animation: ${float} 4s ease infinite;
 img{
     width: 100%;
-    height: auto;
+    height: 70%;
 }
 `
 
@@ -104,7 +106,7 @@ const Intro = () => {
                     <Text>
                         <h1>Hi,</h1>
                         <h3>I'm Shashank!</h3>
-                        <h6>I’m a Fullstack Developer and grad student at OSU. I love building intuitive UIs with React and solid backends with Spring Boot. I enjoy turning ideas into real products and staying updated with new tech. Let’s talk!</h6>
+                        <h6>I’m a Software Developer and grad student at OSU. I love building intuitive UIs with React, Kotlin and solid backends. I enjoy turning ideas into real products and staying updated with new tech. Let’s talk!</h6>
                     </Text>
                 </motion.div>
             </SubBox>

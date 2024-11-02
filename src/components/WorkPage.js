@@ -8,14 +8,13 @@ import SocialIcons from "../subComponents/SocialIcons";
 
 import { Work } from "../data/WorkData";
 import Card from "../subComponents/Card";
-import { YinYang } from "./AllSvgs";
 import BigTitlte from "../subComponents/BigTitlte";
 import { NavLink } from "react-router-dom";
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
 
-  height: 400vh;
+  height: 200vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -30,15 +29,7 @@ const Main = styled(motion.ul)`
 
   color: white;
 `;
-const Rotate = styled.span`
-  display: block;
-  position: fixed;
-  right: 1rem;
-  bottom: 1rem;
-  width: 80px;
-  height: 80px;
-  z-index: 1;
-`;
+
 
 const ABOUT = styled(NavLink)`
 color: ${props => props.theme.text};
@@ -62,7 +53,6 @@ text-decoration: none;
 z-index:1;
 `
 
-// Framer-motion Configuration
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -77,16 +67,16 @@ const container = {
 
 const WorkPage = () => {
   const ref = useRef(null);
-  const yinyang = useRef(null);
+  const scroll = useRef(null);
 
   useEffect(() => {
     let element = ref.current;
 
     const rotate = () => {
-      element.style.transform = `translateX(${-window.pageYOffset}px)`;
+      element.style.transform = `translateX(${-window.scrollY}px)`;
 
-      return (yinyang.current.style.transform =
-        "rotate(" + -window.pageYOffset + "deg)");
+      // return (scroll.current.style.transform =
+      //   "rotate(" + -window.scrollY + "deg)");
     };
 
     window.addEventListener("scroll", rotate);
@@ -110,7 +100,7 @@ const WorkPage = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          My Skills.
+          My Skills
         </motion.h2>
       </SKILLS>
 
@@ -127,7 +117,7 @@ const WorkPage = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          About.
+          About
         </motion.h2>
       </ABOUT>
 
@@ -141,6 +131,8 @@ const WorkPage = () => {
         </Main>
 
         <BigTitlte text="WORK" top="10%" right="20%" />
+
+        <BigTitlte text="Scroll for more" top="70%" right="30%" />
       </Box>
     </ThemeProvider>
   );

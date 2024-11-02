@@ -10,6 +10,7 @@ import ParticleComponent from '../subComponents/ParticleComponent';
 import BigTitle from '../subComponents/BigTitlte'
 import SkillCards from '../subComponents/SkillCards';
 import { motion } from 'framer-motion';
+import { NavLink } from 'react-router-dom';
 
 const Box = styled.div`
 background-color: ${props => props.theme.body};
@@ -53,6 +54,17 @@ margin-right: 1rem;
 }
 `
 
+const ABOUT = styled(NavLink)`
+color: ${props => props.theme.text};
+
+position: absolute;
+top: 50%;
+left: calc(1rem + 2vw);
+transform: translate(-50%, -50%) rotate(-90deg) ;
+text-decoration: none;
+z-index:1;
+`
+
 const Description = styled.div`
 color: ${props => props.theme.text};
 font-size: calc(0.6em + 1vw);
@@ -68,6 +80,17 @@ ul,p{
 }
 `
 
+const WORK = styled(NavLink)`
+color: ${props => props.click ? props.theme.body : props.theme.text};
+
+position: absolute;
+top: 30%;
+left: calc(1rem + 2vw);
+transform: translate(-50%, -50%) rotate(-90deg) ;
+text-decoration: none;
+z-index:1;
+`
+
 const MySkillsPage = () => {
 
     const innerDivStyle = {
@@ -78,6 +101,41 @@ const MySkillsPage = () => {
 
     return (
         <ThemeProvider theme={DarkTheme}>
+
+<WORK to="/work">
+                <motion.h2
+                initial={{
+                    y:-200,
+                    transition: { type:'spring', duration: 1.5, delay:1}
+                }}
+                animate={{
+                    y:0,
+                    transition: { type:'spring', duration: 1.5, delay:1}
+                }}
+                 whileHover={{scale: 1.1}}
+                whileTap={{scale: 0.9}}
+                >
+                    Work
+                </motion.h2>
+            </WORK>
+
+<ABOUT to="/about">
+        <motion.h2
+          initial={{
+            y: -200,
+            transition: { type: 'spring', duration: 1.5, delay: 1 }
+          }}
+          animate={{
+            y: 0,
+            transition: { type: 'spring', duration: 1.5, delay: 1 }
+          }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          About
+        </motion.h2>
+      </ABOUT>
+
             <Box>
 
                 <LogoComponent theme='dark' />
@@ -99,50 +157,7 @@ const MySkillsPage = () => {
                             Click to learn more about them
                         </Title>
                         <SkillCards />
-                        {/* <Description>
-                        I love to create design which speaks, Keep it clean, minimal and simple.
-                    </Description>
-                    <Description>
-                        <strong>I like to Design</strong>
-                        <ul>
-                            <li>
-                                Web Design
-                            </li>
-                            <li>
-                                Mobile Apps
-                            </li>
-                        </ul>
-                    </Description>
-                    <Description>
-                        <strong>Tools</strong>
-                        <ul>
-                            <li>
-                                Figma
-                            </li>
-
-                        </ul>
-                    </Description>
-
-                </Main>
-                <Main>
-                    <Title>
-                        <Develope width={40} height={40} /> Frontend Developer
-                    </Title>
-                    <Description>
-                        I value business or brand for which i'm creating, thus i enjoy bringing new ideas to life.
-                    </Description>
-                    <Description>
-                        <strong>Skills</strong>
-                        <p>
-                            Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase etc.
-                        </p>
-                    </Description>
-                    <Description>
-                        <strong>Tools</strong>
-                        <p>
-                            VScode, Github, Codepen etc.
-                        </p>
-                    </Description> */}
+                        
 
 
                     </motion.div>

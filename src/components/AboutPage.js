@@ -127,7 +127,7 @@ const AboutPage = () => {
         <ThemeProvider theme={DarkTheme}>
 
 
-            {/* <SKILLS to="/skills">
+            <SKILLS to="/skills">
                 <motion.h2
                 initial={{
                     y:-200,
@@ -140,7 +140,7 @@ const AboutPage = () => {
                 whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
                 >
-                    My Skills.
+                    My Skills
                 </motion.h2>
             </SKILLS>
 
@@ -160,7 +160,7 @@ const AboutPage = () => {
                 >
                     Work
                 </motion.h2>
-            </WORK> */}
+            </WORK>
 
             <Box>
 
@@ -183,7 +183,7 @@ const AboutPage = () => {
                     >
                         Hi! I am Shashank Sanjay Betawar.
                         <br /> <br />
-                        I’m a grad student at OSU and a Fullstack Developer. I specialize in creating user-friendly interfaces with React and developing powerful backends with Spring Boot.
+                        I’m a grad student at OSU and a Software Developer. I specialize in creating user-friendly interfaces and powerful backends.
                         <br /> <br />
                         Outside of coding, I’m passionate about video games, trekking, and reading. I enjoy bringing ideas to life and would love to connect with fellow tech enthusiasts.
                         <br /> <br />
