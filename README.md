@@ -1,1 +1,1 @@
-This is the code base for our final project, please do not push code changes to the main branch without getting it reviewed by either of the team members. Kindly create your own branches to make the changes. 
+Cinemagic
