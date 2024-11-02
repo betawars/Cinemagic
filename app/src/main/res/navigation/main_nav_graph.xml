@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/home_screen_activity"
+        android:name = "com.example.cinemagic.HomeScreen.HomeScreenActivityFragment"
+        android:label="CineMagic">
+
+        <action
+            android:id="@+id/action_homeScreen_to_detailScreen"
+            app:destination="@id/detail_screen_activity"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+        <action
+            android:id="@+id/navigate_to_favorites"
+            app:destination="@+id/favorite_screen_activity" />
+        <action
+            android:id="@+id/navigate_to_search"
+            app:destination="@+id/search_screen_activity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/notification_screen_activity"
+        android:name = "com.example.cinemagic.NotificationScreen.NotificationScreenActivityFragment"
+        android:label="CineMagic">
+        <action
+            android:id="@+id/action_homeScreen_to_detailScreen"
+            app:destination="@id/detail_screen_activity"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/detail_screen_activity"
+        android:name = "com.example.cinemagic.DetailScreen.DetailsScreenActivityFragment"
+        android:label="CineMagic">
+    </fragment>
+
+    <fragment
+        android:id="@+id/favorite_screen_activity"
+        android:name = "com.example.cinemagic.FavoriteScreen.FavoriteScreenActivityFragment"
+        android:label="CineMagic">
+        <action
+            android:id="@+id/navigate_to_details"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"
+            app:destination="@+id/detail_screen_activity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/search_screen_activity"
+        android:name = "com.example.cinemagic.SearchScreen.SearchScreenActivityFragment"
+        android:label="CineMagic">
+        <action
+            android:id="@+id/navigate_to_details"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"
+            app:destination="@+id/detail_screen_activity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settings_screen_activity"
+        android:name = "com.example.cinemagic.SettingsScreen.SettingsScreenActivityFragment"
+        android:label="CineMagic">
+    </fragment>
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.cinemagic.Login.RegistrationFragment"
+        android:label="Registration">
+        <!-- Define the action to navigate to the login screen -->
+        <action
+            android:id="@+id/action_registrationFragment_to_loginFragment"
+            app:destination="@id/loginFragment"/>
+    </fragment>
+
+    <!-- Add the LoginFragment with an action to navigate to the home screen after successful login -->
+    <fragment
+        android:id="@+id/loginFragment"
+
+        android:name="com.example.cinemagic.Login.LoginScreenActivityFragmentFragment"
+
+        android:label="Login">
+        <action
+            android:id="@+id/action_loginFragment_to_homeScreenFragment"
+            app:destination="@id/home_screen_activity"/>
+        <!-- Optionally, if your LoginFragment has a way back to the registration screen -->
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment"/>
+    </fragment>
+
+
+
+</navigation>

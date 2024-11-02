@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">CineMagic</string>
+    <string name="notification_description">Notifications</string>
+    <string name="location_description">Location</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="favorites">Favorites</string>
+    <string name="tmdb_api_key">1fbfefdb30d0dd4cc568386a92531895</string>
+    <string name="youtube_api_key">AIzaSyCKsY1d7p2Wo7kqmuew64s1MV8u5OC68jE</string>
+    <string name="google_api_key">AIzaSyDbTyptq6WH2OKasiHejotkpHiGpZv-kP4</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="search_error">
+      Error fetching search results: %1$s
+    </string>
+    <string name="pref_movie_id">
+        MovieId
+    </string>
+    <string name="fav_movie_count">
+        FavoriteCount
+    </string>
+    <string name="msg_token_fmt">
+        FCM Token: %s
+    </string>
+
+    <string name="cinemagic_home_screen">
+        Home-screen
+    </string>
+    <string name="cinemagic_favorite_screen">
+        Favorite
+    </string>
+    <string name="cinemagic_search_screen">
+        Search
+    </string>
+    <string name="now_showing">Now Showing</string>
+    <string name="popular">Popular</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="toggle_theme">Toggle Theme</string>
+    <string name="back">Back</string>
+
+</resources>

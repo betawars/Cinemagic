@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/home_screen_activity"
+        android:title="@string/cinemagic_home_screen"
+        android:icon="@drawable/ic_home_icon"
+        />
+
+    <item
+        android:id="@+id/favorite_screen_activity"
+        android:title="@string/cinemagic_favorite_screen"
+        android:icon="@drawable/ic_favorite_icon"
+        />
+    <item
+        android:id="@+id/search_screen_activity"
+        android:title="@string/cinemagic_search_screen"
+        android:icon="@drawable/ic_search_icon"
+        />
+</menu>

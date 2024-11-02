@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <!-- Override colors for dark theme -->
+        <color name="textColorPrimary">#FFFFFF</color> <!-- White for dark mode -->
+
+        <color name="textColorPrimaryNight">#FFFFFF</color>
+        <color name="textColorSecondaryNight">#B3B3B3</color>
+        <color name="iconColor">#FFFFFFFF</color> <!-- White for dark mode -->
+        <color name="textColor">#FFFFFFFF</color> <!-- White for dark mode -->
+        <!-- If you have other colors to override for dark theme, add them here -->
+
+</resources>
